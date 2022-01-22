@@ -1,0 +1,33 @@
+{
+  "name": "nft-heist",
+  "version": "1.0.0",
+  "description": "Scrape all NFTs from an author you provide.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spinfal/nft-heist.git"
+  },
+  "keywords": [
+    "nft",
+    "heist",
+    "scraper",
+    "crawler",
+    "funny",
+    "entertainment"
+  ],
+  "author": "Spinfal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spinfal/nft-heist/issues"
+  },
+  "homepage": "https://github.com/spinfal/nft-heist#readme",
+  "dependencies": {
+    "image-downloader": "^4.0.3",
+    "import": "^0.0.6",
+    "node-fetch": "^3.2.0"
+  }
+}
