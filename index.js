@@ -13,8 +13,8 @@ if (!Self_Args.length) {
 
 const path = `./funged/${Self_Args[0]}/`;
 if (!fs.existsSync(path)) fs.mkdirSync(path);
-
-fetch(`https://api.opensea.io/api/v1/assets?collection=${Self_Args[0]}&format=json&limit=50`, {
+const limit = Self_Args[1] || 50;
+fetch(`https://api.opensea.io/api/v1/assets?collection=${Self_Args[0]}&format=json&limit=${limit}`, {
     headers: {
         'X-Forwarded': '127.0.0.1',
         'User-Agent': 'Mozilla/5.0',
@@ -26,7 +26,7 @@ fetch(`https://api.opensea.io/api/v1/assets?collection=${Self_Args[0]}&format=js
     console.log('User has assets in collection. Scraping...\n')
     json.assets.forEach(asset => {
         //if (asset.image_url.length > 0) {
-        if (asset && asset.image_url && asset.image_url.length > 0) {
+	if (asset && asset.image_url && asset.image_url.length > 0) {
             fungeTheToken({
                 url: asset.image_url,
                 dest: `../../${path}/`
