@@ -26,7 +26,7 @@ node . <username>
 ## Note: By default it will download 50 nfts to change that add argument at end
 ```
 node . <username> no_of_downloads 
-
+```
 ## Why aren't some users working?
 To be honest; I don't know. I don't know much about OpenSea or NFTs, all I know is if the url looks like this: `https://opensea.io/collection/<username>` then it will work. Otherwise, it will not. But you can still try it.
 
