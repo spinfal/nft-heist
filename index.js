@@ -26,7 +26,7 @@ fetch(`https://api.opensea.io/api/v1/assets?collection=${Self_Args[0]}&format=js
     console.log('User has assets in collection. Scraping...\n')
     json.assets.forEach(asset => {
         //if (asset.image_url.length > 0) {
-	if (asset && asset.image_url && asset.image_url.length > 0) {
+        if (asset && asset.image_url && asset.image_url.length > 0) {
             fungeTheToken({
                 url: asset.image_url,
                 dest: `../../${path}/`
